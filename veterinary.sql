@@ -108,6 +108,29 @@ VALUES
     (9, 9, '2023-05-02 00:00:00', 4, 'Allergic reaction', 'Antihistamines', 'Allergic reaction due to food prescribed antihistamine'),
     (10, 10, '2023-05-20 00:00:00', 6, 'Conjunctivitis', 'Eye drops', 'Prescribed eye drops for conjunctivitis');
 
+INSERT INTO doctors(doctorid, dfirstname, dlastname, speciality, phone, email)
+VALUES
+(1, 'Dr.Maria', 'Santos', 'General Veterinarian', '987-654-3210','maria@example.com'),
+(2, 'Dr.Antonio', 'Gonzales', 'Feline Specialist', '555-123-4567','antonio@example.com'),
+(3, 'Dr.Felipe', 'Luna', 'Orthopedic Specialist', '111-222-3333', 'felipe@example.com'),
+(4, 'Dr.Sofia', 'Reyes', 'Dermatology Specialist', '999-888-7777','sofia@xample.com'),
+(5, 'Dr.Luis', 'Torres', 'Surgery Specialist', '123-555-7777','luis@example.com'),
+(6, 'Dr.Carmen', 'Fernandez','Opthalmology Specialist','333-222-1111','carmen@example.com');
+
+
+INSERT INTO appointments(appointid, animalid, appointdate, reason)
+VALUES
+(1, 1, '2023-01-05', 'Annual checkup'),
+(2, 2, '2023-01-10', 'Vaccination'),
+(3, 3, '2023-02-02', 'Injury assessment'),
+(4, 4, '2023-02-15', 'Dental cleaning'),
+(5, 5, '2023-03-05', 'Skin condition'),
+(6, 6, '2023-03-10', 'Check for fleas'),
+(7, 7, '2023-04-12', 'Vaccination'),
+(8, 8, '2023-04-18', 'Spaying/neutering'),
+(9, 9, '2023-05-02', 'Allergy treatment'),
+(10, 10, '2023-05-20', 'Eye infection');
+
     ALTER TABLE owners
     ADD COLUMN registereddate DATE;
 
@@ -152,25 +175,3 @@ GROUP BY a.animalid, a.name
 ORDER BY appointment_count DESC
 LIMIT 1;
 
-INSERT INTO doctors(doctorid, dfirstname, dlastname, speciality, phone, email)
-VALUES
-(1, 'Dr.Maria', 'Santos', 'General Veterinarian', '987-654-3210','maria@example.com'),
-(2, 'Dr.Antonio', 'Gonzales', 'Feline Specialist', '555-123-4567','antonio@example.com'),
-(3, 'Dr.Felipe', 'Luna', 'Orthopedic Specialist', '111-222-3333', 'felipe@example.com'),
-(4, 'Dr.Sofia', 'Reyes', 'Dermatology Specialist', '999-888-7777','sofia@xample.com'),
-(5, 'Dr.Luis', 'Torres', 'Surgery Specialist', '123-555-7777','luis@example.com'),
-(6, 'Dr.Carmen', 'Fernandez','Opthalmology Specialist','333-222-1111','carmen@example.com');
-
-
-INSERT INTO appointments(appointid, animalid, appointdate, reason)
-VALUES
-(1, 1, '2023-01-05', 'Annual checkup'),
-(2, 2, '2023-01-10', 'Vaccination'),
-(3, 3, '2023-02-02', 'Injury assessment'),
-(4, 4, '2023-02-15', 'Dental cleaning'),
-(5, 5, '2023-03-05', 'Skin condition'),
-(6, 6, '2023-03-10', 'Check for fleas'),
-(7, 7, '2023-04-12', 'Vaccination'),
-(8, 8, '2023-04-18', 'Spaying/neutering'),
-(9, 9, '2023-05-02', 'Allergy treatment'),
-(10, 10, '2023-05-20', 'Eye infection');
