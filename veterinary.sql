@@ -1,13 +1,14 @@
 CREATE DATABASE veterinary;
 
-CREATE TABLE owners( 
-    ownerid INT PRIMARY KEY, 
-    ofirstname VARCHAR(50) NOT NULL,
-    phone VARCHAR(15) NOT NULL, 
-    phone VARCHAR(15) NOT NULL,
-    olastname VARCHAR(50) NOT NULL, 
-    address VARCHAR(15) NOT NULL, 
-    email VARCHAR(100) NOT NULL );
+CREATE TABLE owners
+(
+ownerid INT PRIMARY KEY,
+ofirstname VARCHAR(50),
+olastname VARCHAR(50),
+address VARCHAR(100),
+phone VARCHAR(15),
+email VARCHAR(100)
+);
 
     CREATE TABLE animals(
    animalid INT PRIMARY KEY,
